@@ -21,8 +21,9 @@ button.addEventListener("click", async () => {
     const value = input.value;
     const result = await getData(value);
     cityName.innerText = `${result.location.name}, ${result.location.region} - ${result.location.country}`
-    cityTime.innerText = result.location.localtime;
-    cityTemp.innerText = result.current.temp_c;
+    const localTime = new Date(result.location.localtime);
+    cityTime.innerText = `Local time: ${localTime.toLocaleTimeString()}`;
+    cityTemp.innerText = `${result.current.temp_c}°C`;
 
 
 });
