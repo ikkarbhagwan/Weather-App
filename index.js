@@ -7,14 +7,19 @@ const cityTime = document.getElementById("city-time");
 const cityTemp = document.getElementById("city-temp");
 
 
-
-
 async function getData(CityName) {
 
     const promise = await fetch(`http://api.weatherapi.com/v1/current.json?key=0dbe8f412eca45eaa3b114455242101&q=${CityName}&aqi=yes`)
 
     return await promise.json();
 };
+
+button.addEventListener('click', function () {
+    if (input.value.trim().length <= 0) {
+        alert("Enter something in the field!");
+    }
+});
+
 
 
 button.addEventListener("click", async () => {
@@ -24,7 +29,6 @@ button.addEventListener("click", async () => {
     const localTime = new Date(result.location.localtime);
     cityTime.innerText = `Local time: ${localTime.toLocaleTimeString()}`;
     cityTemp.innerText = `${result.current.temp_c}°C`;
-
 
 });
 
