@@ -1,27 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather | App</title>
     <link rel="stylesheet" href="style.css">
+ 
 </head>
-<body>
 
-    <div>
+<body>
+    
+
+    <div class="weather-container">
         <input id="city-input" type="text" placeholder="Enter city name">
         <button id="search-btn">Search</button>
     </div>
 
     <div id="container">
-        <h3 id="city-name">Canada, Ontaio - Toranto</h3>
-        <h5 id="city-time">Localtime</h5>
+        <h3 id="city-name">Pune, Maharashtra -India </h3>
+        <h5 id="city-time"></h5>
         <p id="city-temp"></p>
+        <img src="./img/weather icon.png" alt="Weather Icon">
+        <p id="weather-description"></p>
+        <p id="additional-details"></p>
     </div>
-
- 
-
 
     <script src="index.js"></script>
 </body>
+
 </html>
